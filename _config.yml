@@ -14,7 +14,7 @@ footer_text: >
 
 keywords: MohammadHossein, Rezaei, NLP, mohammadhossein-rezaei, mohammadhosseinrezaei, mhrezaei
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: prof_pic.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://mhrezaei1.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
