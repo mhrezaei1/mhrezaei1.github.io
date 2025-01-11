@@ -1,34 +1,27 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"blanco"
+  - firstname: ["Eduardo", "E,"]
+    url: https://eduardoblanco.github.io/
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"sanayei"
+  - firstname: ["Reza", "Rey", "R."]
+    url: https://rsanayei.github.io/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"behtard":
+  - firstname: ["Steven", "S."]
+    url: https://bethard.github.io/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Kwon":
+  - firstname: ["Yeauen", "Y."]
+    url: https://infosci.arizona.edu/person/yea-eun-kwon
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Singh":
+  - firstname: ["Abhyuday", "A."]
+    url: https://www.linkedin.com/in/abhyudaysingh31/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Wang":
+  - firstname: ["Zijie", "Z."]
+    url: https://wang-zijie.github.io/
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
-
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Hossain":
+  - firstname: ["Md Mosharaf", "Md", "Mosharaf", "M."]
+    url: https://mosharafhossain.github.io/
