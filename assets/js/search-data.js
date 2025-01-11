@@ -431,16 +431,17 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+    },{id: "news-i-participated-in-sonic-summer-research-workshop-2023-at-cornell-university",
+          title: 'I participated in SoNIC Summer Research Workshop 2023 at Cornell University.',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-my-paper-paraphrasing-in-affirmative-terms-improves-negation-understanding-has-been-accepted-to-acl-2024",
+          title: 'My paper, Paraphrasing in Affirmative Terms Improves Negation Understanding, has been accepted to...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-our-paper-on-interpreting-indirect-answers-to-yes-no-questions-in-multiple-languages-has-been-accepted-to-emnlp-findings-2023",
+          title: 'Our paper on Interpreting Indirect Answers to Yes-No Questions in Multiple Languages has...',
+          description: "",
+          section: "News",},{id: "news-i-participated-in-the-linxs-summer-research-program-at-stanford-university-in-the-summer-of-2024-as-an-undergraduate-visiting-research-intern-i-was-advised-by-dr-diyi-yang-in-the-salt-lab",
+          title: 'I participated in the LINXS Summer Research Program at Stanford University in the...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
