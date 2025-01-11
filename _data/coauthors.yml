@@ -1,5 +1,5 @@
 "blanco"
-  - firstname: ["Eduardo", "E,"]
+  - firstname: ["Eduardo", "E."]
     url: https://eduardoblanco.github.io/
 
 "sanayei"
@@ -10,18 +10,18 @@
   - firstname: ["Steven", "S."]
     url: https://bethard.github.io/
 
-"Kwon":
+"kwon":
   - firstname: ["Yeauen", "Y."]
     url: https://infosci.arizona.edu/person/yea-eun-kwon
 
-"Singh":
+"singh":
   - firstname: ["Abhyuday", "A."]
     url: https://www.linkedin.com/in/abhyudaysingh31/
 
-"Wang":
+"wang":
   - firstname: ["Zijie", "Z."]
     url: https://wang-zijie.github.io/
 
-"Hossain":
+"hossain":
   - firstname: ["Md Mosharaf", "Md", "Mosharaf", "M."]
     url: https://mosharafhossain.github.io/
