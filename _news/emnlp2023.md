@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper on [Interpreting Indirect Answers to Yes-No Questions in Multiple Languages](https://aclanthology.org/2023.findings-emnlp.146/) has been accepted to EMNLP Findings 2023.
+Our paper on [*Interpreting Indirect Answers to Yes-No Questions in Multiple Languages*](https://aclanthology.org/2023.findings-emnlp.146/) has been accepted to EMNLP Findings 2023.
