@@ -274,7 +274,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 
 scholar:
   last_name: [Rezaei]
-  first_name: [MohammadHossein, M., M. H.]
+  first_name: [MohammadHossein, M., M. H., Mohammadhossein, mohammadhossein]
 
   style: apa
   locale: en

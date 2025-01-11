@@ -12,3 +12,4 @@ _sass/tabler-icons/*.scss
 _scripts/search.liquid.js
 _config.yml
 _data/coauthors.yml
+*
