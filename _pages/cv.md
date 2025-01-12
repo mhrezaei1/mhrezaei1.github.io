@@ -4,8 +4,8 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-cv_pdf: mohammadhossein-rezaei-cv.pdf # you can also use external links here
-description: I have three documents that might be of interest to you: My Resume, My CV, and My Coursework.
+cv_pdf: mohammadhossein-rezaei-cv.pdf 
+description: I have three documents that might be of interest to you; My Resume, My CV, and My Coursework.
 toc:
   sidebar: left
 ---
