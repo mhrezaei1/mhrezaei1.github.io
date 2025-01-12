@@ -1,9 +1,11 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"ACL":
+  url: https://www.aclweb.org
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"SemEval":
+  url: https://semeval.github.io/
+  color: "#f29105"
 
-"Vision":
-  color: "#009f36"
+"EMNLP (Findings)":
+  color: "#b71c1c"
+  url: https://2023.emnlp.org
