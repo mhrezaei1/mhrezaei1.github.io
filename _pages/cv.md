@@ -10,18 +10,17 @@ toc:
   sidebar: left
 ---
 
-## [Resume]("https://mhrezaei.com/assets/pdf/mohammadhossein-rezaei-resume.pdf")
+## [Resume](https://mhrezaei.com/assets/pdf/mohammadhossein-rezaei-resume.pdf)
 This is a shorter document that provides a brief (1 page + publications) summary of my background.
 <embed src="/assets/pdf/mohammadhossein-rezaei-resume.pdf" type="application/pdf" width="100%" height="600px" />
 <br>
 
-## [CV]("https://mhrezaei.com/assets/pdf/mohammadhossein-rezaei-cv.pdf")
+## [Curriculum Vitae/CV](https://mhrezaei.com/assets/cv/mohammadhossein-rezaei-cv.pdf)
 This is a long and detailed document that lists my education, work experience, publications, and more.
-<embed src="/assets/pdf/mohammadhossein-rezaei-cv.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="/assets/cv/mohammadhossein-rezaei-cv.pdf" type="application/pdf" width="100%" height="600px" />
 <br>
 
-## [Coursework]("https://mhrezaei.com/assets/pdf/mohammadhossein-rezaei-coursework.pdf")
+## [Coursework](https://mhrezaei.com/assets/coursework/mohammadhossein-rezaei-coursework.pdf)
 This is a list of the descriptions of all the academic courses I have taken during my studies.
 <embed src="/assets/pdf/mohammadhossein-rezaei-coursework.pdf" type="application/pdf" width="100%" height="600px" />
-
-Please feel free to reach out if you have any questions or would like to learn more about my background.
+<br>
