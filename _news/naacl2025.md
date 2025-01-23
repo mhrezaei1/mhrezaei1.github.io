@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My paper, [*Making Language Models Robust Against Negation*](), has been accepted to NAACL 2025. See you in Albuquerque! 
+My paper, [*Making Language Models Robust Against Negation*](https://mhrezaei.com/publications/), has been accepted to NAACL 2025. See you in Albuquerque! 
