@@ -35,6 +35,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-participated-in-the-linxs-summer-research-program-at-stanford-university-in-the-summer-of-2024-as-an-undergraduate-visiting-research-intern-i-was-advised-by-dr-diyi-yang-in-the-salt-lab",
           title: 'I participated in the LINXS Summer Research Program at Stanford University in the...',
           description: "",
+          section: "News",},{id: "news-my-paper-making-language-models-robust-against-negation-has-been-accepted-to-naacl-2025-see-you-in-albuquerque",
+          title: 'My paper, Making Language Models Robust Against Negation, has been accepted to NAACL...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
