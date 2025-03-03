@@ -6,4 +6,4 @@ related_posts: false
 ---
 
 
-Check out our recent preprint on [EgoNormia: Benchmarking Physical Social Norm Understanding](https://egonormia.org).
+Check out our recent preprint on [EgoNormia: *Benchmarking Physical Social Norm Understanding*](https://egonormia.org).
