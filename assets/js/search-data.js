@@ -38,6 +38,9 @@ ninja.data = [{
           section: "News",},{id: "news-my-paper-making-language-models-robust-against-negation-has-been-accepted-to-naacl-2025-see-you-in-albuquerque",
           title: 'My paper, Making Language Models Robust Against Negation, has been accepted to NAACL...',
           description: "",
+          section: "News",},{id: "news-check-out-our-recent-preprint-on-egonormia-benchmarking-physical-social-norm-understanding-https-egonormia-org",
+          title: 'Check out our recent preprint on [EgoNormia: Benchmarking Physical Social Norm Understanding][https://egonormia.org].',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
