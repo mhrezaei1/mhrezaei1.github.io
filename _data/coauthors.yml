@@ -25,3 +25,27 @@
 "hossain":
   - firstname: ["Md Mosharaf", "Md", "Mosharaf", "M."]
     url: https://mosharafhossain.github.io/
+
+"cuvin":
+  - firstname: ["Phil", "P."]
+    url: https://scholar.google.com/citations?user=bDIUeu4AAAAJ&hl=en
+
+"Fu":
+  - firstname: ["Yicheng", "Y."]
+    url: https://sofyc.github.io/
+
+"zhang":
+  - firstname: ["Yanzhe", "Y."]
+    url: https://stevenyzzhang.github.io/website/
+
+"ziems":
+  - firstname: ["Caleb", "C."]
+    url: https://calebziems.com/
+
+"yang":
+  - firstname: ["Diyi", "D."]
+    url: https://cs.stanford.edu/~diyiy/
+
+"zhu":
+  - firstname: ["Hao", "H."]
+    url: https://zhuhao.me/

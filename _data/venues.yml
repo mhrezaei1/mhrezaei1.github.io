@@ -13,3 +13,7 @@
 "EMNLP (Findings)":
   color: "#b71c1c"
   url: https://2023.emnlp.org
+
+"EgoNormia":
+  color: "#000000"
+  url: https://egonormia.github.io/
