@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I will be joining [<img src="assets/img/Scale_AI.png" alt="Scale AI" height="20px"/>](https://scale.com) as a Research Intern in the summer of 2025. 
+I will be joining [Scale AI](https://scale.com) as a Research Intern in the summer of 2025. 
