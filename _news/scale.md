@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-04-01 15:59:00-0400
+date: 2025-04-01 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-I will be joining [![Scale AI](assets/img/Scale_AI.png)](https://scale.com) as a Research Intern in the summer of 2025. 
+I will be joining [<img src="assets/img/Scale_AI.png" alt="Scale AI" height="20px"/>](https://scale.com) as a Research Intern in the summer of 2025. 
