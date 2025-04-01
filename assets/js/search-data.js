@@ -41,8 +41,8 @@ ninja.data = [{
           section: "News",},{id: "news-check-out-our-recent-preprint-on-egonormia-benchmarking-physical-social-norm-understanding",
           title: 'Check out our recent preprint on EgoNormia: Benchmarking Physical Social Norm Understanding.',
           description: "",
-          section: "News",},{id: "news-i-will-be-joining-as-a-research-intern-in-the-summer-of-2025",
-          title: 'I will be joining as a Research Intern in the summer of 2025....',
+          section: "News",},{id: "news-i-will-be-joining-scale-ai-as-a-research-intern-in-the-summer-of-2025",
+          title: 'I will be joining Scale AI as a Research Intern in the summer...',
           description: "",
           section: "News",},{
         id: 'social-email',
