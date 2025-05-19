@@ -38,12 +38,7 @@ ninja.data = [{
           section: "News",},{id: "news-my-paper-making-language-models-robust-against-negation-has-been-accepted-to-naacl-2025-see-you-in-albuquerque",
           title: 'My paper, Making Language Models Robust Against Negation, has been accepted to NAACL...',
           description: "",
-          section: "News",},{id: "news-egonormia",
-          title: 'Egonormia',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/egonormia/";
-            },},{id: "news-i-will-be-joining-scale-ai-as-a-research-intern-in-the-summer-of-2025",
+          section: "News",},{id: "news-i-will-be-joining-scale-ai-as-a-research-intern-in-the-summer-of-2025",
           title: 'I will be joining Scale AI as a Research Intern in the summer...',
           description: "",
           section: "News",},{id: "news-egonormia-benchmarking-physical-social-norm-understanding-has-been-accepted-to-acl-2025-findings",
