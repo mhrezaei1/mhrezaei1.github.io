@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I joined [Scale AI](https://scale.com) as a Research Intern.
+I joined [*Scale AI*](https://scale.com) as a Research Intern, Post-training.
