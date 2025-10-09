@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I participated in [SoNIC Summer Research Workshop 2023](https://diversity.cis.cornell.edu/programs/sonic/) at Cornell University. 
+I participated in the [SoNIC Summer Research Workshop 2023](https://diversity.cis.cornell.edu/programs/sonic/) at Cornell University. 
