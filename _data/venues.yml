@@ -1,5 +1,5 @@
 "NAACL":
-  url: https://2025.naacl.org/
+  url: https://2025.naacl.org
   color: "#b509ac"
 
 "ACL":
@@ -7,7 +7,7 @@
   color: "#00369f"
 
 "SemEval":
-  url: https://semeval.github.io/
+  url: https://semeval.github.io
   color: "#f29105"
 
 "EMNLP (Findings)":
@@ -16,4 +16,8 @@
 
 "ACL (Findings)":
   color: "#000000"
-  url: https://2025.aclweb.org/
+  url: https://2025.aclweb.org
+
+"Scale AI":
+  color: "#9C83FF"
+  url: https://scale.com/research/onlinerubrics
