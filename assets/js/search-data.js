@@ -23,8 +23,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "news-i-participated-in-sonic-summer-research-workshop-2023-at-cornell-university",
-          title: 'I participated in SoNIC Summer Research Workshop 2023 at Cornell University.',
+        },{id: "news-i-participated-in-the-sonic-summer-research-workshop-2023-at-cornell-university",
+          title: 'I participated in the SoNIC Summer Research Workshop 2023 at Cornell University.',
+          description: "",
+          section: "News",},{id: "news-check-out-my-internship-project-at-scale-ai-online-rubrics-elicitation-from-pairwise-comparisons",
+          title: 'Check out my internship project at Scale AI: Online Rubrics Elicitation from Pairwise...',
           description: "",
           section: "News",},{id: "news-our-paper-on-interpreting-indirect-answers-to-yes-no-questions-in-multiple-languages-has-been-accepted-to-emnlp-findings-2023",
           title: 'Our paper on Interpreting Indirect Answers to Yes-No Questions in Multiple Languages has...',
