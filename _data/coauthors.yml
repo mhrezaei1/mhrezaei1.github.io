@@ -6,9 +6,11 @@
   - firstname: ["Zihao", "Z."]
     url: https://zihao12.github.io/
 
-"wang":
   - firstname: ["Clinton", "C."]
     url: https://clintonjwang.github.io/
+
+  - firstname: ["Zijie", "Z."]
+    url: https://wang-zijie.github.io/
 
 "he":
   - firstname: ["Yunzhong", "Y."]
@@ -41,10 +43,6 @@
 "singh":
   - firstname: ["Abhyuday", "A."]
     url: https://www.linkedin.com/in/abhyudaysingh31/
-
-"wang":
-  - firstname: ["Zijie", "Z."]
-    url: https://wang-zijie.github.io/
 
 "hossain":
   - firstname: ["Md Mosharaf", "Md", "Mosharaf", "M."]
