@@ -47,6 +47,12 @@ ninja.data = [{
           section: "News",},{id: "news-check-out-my-internship-project-at-scale-ai-online-rubrics-elicitation-from-pairwise-comparisons",
           title: 'Check out my internship project at Scale AI: Online Rubrics Elicitation from Pairwise...',
           description: "",
+          section: "News",},{id: "news-i-was-selected-as-the-overall-outstanding-senior-for-both-the-computer-science-department-and-the-college-of-science",
+          title: 'I was selected as the Overall Outstanding Senior for both the Computer Science...',
+          description: "",
+          section: "News",},{id: "news-i-graduated-summa-cum-laude-with-a-b-s-in-computer-science-and-a-minor-in-mathematics-from-the-university-of-arizona-i-delivered-the-keynote-address-at-the-college-of-science-commencement-ceremony",
+          title: 'I graduated Summa Cum Laude with a B.S. in Computer Science and a...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
