@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I graduated *Summa Cum Laude* with a B.S. in Computer Science and a Minor in Mathematics. I delivered the [keynote address](https://www.youtube.com/live/zUaTPknUfPA?si=NryyYUboE7QgTX4K&t=2251) at the College of Science Commencement Ceremony.
+I graduated *Summa Cum Laude* with a B.S. in Computer Science and a Minor in Mathematics. I delivered the [keynote address](https://www.youtube.com/live/zUaTPknUfPA?si=NryyYUboE7QgTX4K&t=2251) at the College of Science Convocation Ceremony.
