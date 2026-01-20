@@ -16,8 +16,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a Machine Learning Research Engineer at [**Scale AI**](https://scale.com/) <img src="assets/img/scale_logo.jpg" alt="Scale AI" height="20px"/>, 
-where I work on post-training and evaluation of LLMs. 
+I am a Machine Learning Research Engineer at [**Scale AI**](https://scale.com/) <img src="assets/img/scale_logo.jpg" alt="Scale AI" height="20px"/> where I work on post-training and evaluation of LLMs. 
 I worked on [OnlineRubrics](https://arxiv.org/abs/2510.07284), an approach for post-training LLMs with evolving rubrics to improve alignment in tasks without verifiable ground-truth.  
 
 I earned a B.S. in Computer Science from the [**University of Arizona**](https://www.arizona.edu/) <img src="assets/img/uofa.png" alt="UArizona" height="20px"/>. I was a member of the [*Computational Language Understanding (CLU) Lab*](https://clulab.org/), advised by [Eduardo Blanco](https://eduardoblanco.github.io/), where I worked on making SLMs more robust against negation by [further pre-training](https://aclanthology.org/2025.naacl-long.413) and [paraphrasing in affirmative terms](https://aclanthology.org/2024.acl-short.55/).

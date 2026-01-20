@@ -5,4 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I was selected as the [Overall Outstanding Senior](https://science.arizona.edu/news/college-science-recognizes-10-outstanding-seniors-fall-2025-semester) for both the Computer Science Department and the College of Science.
+I was selected as the [Overall Outstanding Senior](https://science.arizona.edu/news/college-science-recognizes-10-outstanding-seniors-fall-2025-semester) for both the Computer Science Department and the College of Science
+at the University of Arizona.
