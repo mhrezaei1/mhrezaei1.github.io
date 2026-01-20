@@ -50,7 +50,7 @@ ninja.data = [{
           section: "News",},{id: "news-i-was-selected-as-the-overall-outstanding-senior-for-both-the-computer-science-department-and-the-college-of-science-at-the-university-of-arizona",
           title: 'I was selected as the Overall Outstanding Senior for both the Computer Science...',
           description: "",
-          section: "News",},{id: "news-i-graduated-summa-cum-laude-with-a-b-s-in-computer-science-and-a-minor-in-mathematics-i-delivered-the-keynote-address-at-the-college-of-science-commencement-ceremony",
+          section: "News",},{id: "news-i-graduated-summa-cum-laude-with-a-b-s-in-computer-science-and-a-minor-in-mathematics-i-delivered-the-keynote-address-at-the-college-of-science-convocation-ceremony",
           title: 'I graduated Summa Cum Laude with a B.S. in Computer Science and a...',
           description: "",
           section: "News",},{id: "news-i-moved-to-new-york-city-to-join-scale-ai-as-a-machine-learning-research-engineer-post-training",
