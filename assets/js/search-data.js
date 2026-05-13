@@ -56,6 +56,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-moved-to-new-york-city-to-join-scale-ai-as-a-machine-learning-research-engineer-post-training",
           title: 'I moved to New York City to join Scale AI as a Machine...',
           description: "",
+          section: "News",},{id: "news-new-paper-out-reward-hacking-in-rubric-based-reinforcement-learning",
+          title: 'New paper out: Reward Hacking in Rubric-Based Reinforcement Learning.',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
