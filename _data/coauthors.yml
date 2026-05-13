@@ -71,3 +71,23 @@
 "zhu":
   - firstname: ["Hao", "H."]
     url: https://zhuhao.me/
+
+"mahmoud":
+  - firstname: ["Anas", "A."]
+    url: https://www.linkedin.com/in/anasmahmoud/
+
+"gunjal":
+  - firstname: ["Anisha", "A."]
+    url: https://anisha2102.github.io/
+
+"raghavendra":
+  - firstname: ["Mohit", "M."]
+    url: https://mohit-raghavendra.github.io/
+
+"calvo":
+  - firstname: ["Miguel Romero", "Miguel", "M."]
+    url: https://scholar.google.com/citations?user=fE9WNxgAAAAJ&hl=es
+
+"dan":
+  - firstname: ["Soham", "S."]
+    url: https://sdan2.github.io/
