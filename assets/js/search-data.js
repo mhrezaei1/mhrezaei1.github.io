@@ -59,6 +59,9 @@ ninja.data = [{
           section: "News",},{id: "news-new-paper-out-reward-hacking-in-rubric-based-reinforcement-learning",
           title: 'New paper out: Reward Hacking in Rubric-Based Reinforcement Learning.',
           description: "",
+          section: "News",},{id: "news-new-paper-out-rubric-guided-self-distillation-post-training-without-rubric-verifiers-verifier-free-rubric-post-training-with-no-training-time-judge-calls",
+          title: 'New paper out: Rubric-Guided Self-Distillation: Post-Training Without Rubric Verifiers — verifier-free rubric post-training...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
