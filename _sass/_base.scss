@@ -23,6 +23,16 @@ hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
+// Homepage section headings ("selected publications", "news", "latest posts").
+// The theme never sizes h2, so these inherited Bootstrap's 2rem -- twice the
+// body text, which made them read as page titles competing with the bio rather
+// than as labels for the block underneath. Scoped to a class instead of
+// restyling h2 globally, which would also shrink headings on the publications
+// and CV pages.
+.home-section {
+  font-size: 1.4rem;
+}
+
 table {
   td,
   th {
