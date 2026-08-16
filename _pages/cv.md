@@ -2,7 +2,7 @@
 layout: page
 permalink: /cv/
 title: CV
-nav: true
+nav: false
 nav_order: 5
 cv_pdf: mohammadhossein-rezaei-cv.pdf 
 description: 
