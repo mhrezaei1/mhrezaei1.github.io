@@ -54,7 +54,8 @@
     .rcrit { transition: opacity 0.2s ease; transform: none; }
   }
 
-  html, body { height: 100%; }
+  html { height: 100%; }
+  body.home { height: 100%; }
 
   body {
     margin: 0;
@@ -63,10 +64,17 @@
     font: 400 17px/1.6 system-ui, -apple-system, BlinkMacSystemFont,
           "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
+  }
 
-    /* Column: the page block takes the free space and centres itself, the
-       terminal sits underneath. Nothing scrolls; the transcript scrolls
-       inside its own box instead. */
+  /* The one-screen layout belongs to the homepage alone. Scoped to .home
+     because these rules previously applied to every page sharing this
+     stylesheet, and `overflow: hidden` made the publications page
+     impossible to scroll on any viewport wider than 40rem.
+
+     Column: the page block takes the free space and centres itself, the
+     terminal sits underneath. Nothing scrolls; the transcript scrolls
+     inside its own box instead. */
+  body.home {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -296,8 +304,8 @@
      rather than letting anyone reach them. Fall back to an ordinary
      scrolling document, with the prompt stuck to the bottom edge. */
   @media (max-width: 40rem) {
-    html, body { height: auto; }
-    body { display: block; overflow: auto; }
+    html { height: auto; }
+    body.home { height: auto; display: block; overflow: auto; }
     main { display: block; overflow: visible; }
     .wrap { padding: 2rem 1.25rem 1rem; }
     #term {
@@ -334,25 +342,25 @@ body {
   .back a:hover { text-decoration: underline; text-underline-offset: 0.17em; }
 
   h2 { font-size: 0.95rem; font-weight: 400; font-style: italic;
-       margin: 2.6rem 0 1rem; }
+       margin: 3.1rem 0 1.15rem; }
 
   /* Each paper is a block with room around it, so the page reads as a list of
      things rather than as continuous text. */
-  .entry { margin-bottom: 1.9rem; }
+  .entry { margin-bottom: 2.2rem; }
 
   /* The title is not a link: the bracketed tags below carry every
      destination, which keeps underlines off the prose entirely. */
   .row { display: flex; gap: 1.5rem; align-items: baseline; }
   .row .t { flex: 1 1 auto; font-weight: 600; }
-  .row .v { flex: 0 0 auto; font-style: italic; font-size: 0.9em; }
+  .row .v { flex: 0 0 auto; font-style: italic; font-size: 0.86em; }
 
-  .a { font-size: 0.9em; margin-top: 0.2rem; }
+  .a { font-size: 0.81em; line-height: 1.45; margin-top: 0.3rem; }
   .a a { text-decoration: none; }
   .a a:hover { text-decoration: underline; text-decoration-thickness: 1px;
                text-underline-offset: 0.17em; }
   .a b { font-weight: 700; }
 
-  .tags { font-size: 0.84em; margin-top: 0.35rem; }
+  .tags { font-size: 0.78em; margin-top: 0.45rem; }
   .tags a { text-decoration: none; margin-right: 0.55em; }
   .tags a:hover { text-decoration: underline; text-underline-offset: 0.17em; }
   .eq { font-style: italic; }
