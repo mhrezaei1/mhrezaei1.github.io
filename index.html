@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MohammadHossein Rezaei</title>
+<meta name="description" content="Machine Learning Research Scientist at Scale AI, working on post-training and evaluation of large language models."/>
+<meta name="color-scheme" content="dark"/>
+<link rel="stylesheet" href="assets/css/site.css"/>
+</head>
+<body>
+
+
+<main>
+  <div class="wrap" id="page">
+    <img class="photo" src="assets/img/photo.jpg" alt="MohammadHossein Rezaei"/>
+
+    <h1>MohammadHossein Rezaei</h1>
+
+    <p class="bio">
+      I am a Machine Learning Research Scientist at Scale AI, working on
+      post-training and evaluation. Most of my recent work is on using rubrics
+      as a reward signal in open-ended domains: <a class="q" href="https://arxiv.org/abs/2510.07284">eliciting
+      criteria online as a policy improves</a>, <a class="q" href="https://arxiv.org/abs/2605.12474">how
+      policies reward-hack the rubric verifiers</a>, and <a class="q" href="https://arxiv.org/abs/2606.12507">how
+      to post-train without a verifier at all</a>. I also work on building
+      benchmarks.
+    </p>
+
+    <p class="bio">
+      Before Scale, I was a research intern at Stanford, working on <a class="q" href="https://egonormia.org">benchmarking
+      physical-social norm understanding</a>. I earned my B.S. in Computer
+      Science at the University of Arizona, where I worked on
+      <a class="q" href="https://aclanthology.org/2025.naacl-long.413/">making
+      encoder models robust against negation</a>.
+    </p>
+
+    <div class="pubs">
+      <span class="head">Selected publications</span>
+      <div class="pub"><span class="t"><a href="https://arxiv.org/abs/2510.07284">Online Rubrics Elicitation from Pairwise Comparisons</a></span><span class="v">ICML 2026</span></div>
+      <div class="pub"><span class="t"><a href="https://arxiv.org/abs/2605.12474">Reward Hacking in Rubric-Based Reinforcement Learning</a></span><span class="v">arXiv 2026</span></div>
+      <div class="pub"><span class="t"><a href="https://arxiv.org/abs/2606.12507">Rubric-Guided Self-Distillation</a></span><span class="v">arXiv 2026</span></div>
+      <div class="pub"><span class="t"><a href="https://egonormia.org">EgoNormia: Benchmarking Physical-Social Norm Understanding</a></span><span class="v">ACL Findings 2025</span></div>
+      <div class="more"><a href="publications.html">All publications &rarr;</a></div>
+    </div>
+
+    <p class="links">
+      <a href="mailto:mhrezaei@arizona.edu">Email</a><i>·</i><a
+        href="https://scholar.google.com/citations?user=INq7JWIAAAAJ">Google Scholar</a><i>·</i><a
+        href="https://x.com/mhrezaeics">X</a><i>·</i><a
+        href="https://www.linkedin.com/in/mhrezaeics">LinkedIn</a><i>·</i><a
+        href="https://github.com/mhrezaei1">GitHub</a>
+    </p>
+  </div>
+</main>
+
+<div id="term">
+  <div id="log" aria-live="polite"></div>
+  <div class="prompt">
+    <span>&gt;</span>
+    <input id="in" autocomplete="off" autocapitalize="off" spellcheck="false"
+           placeholder="ask me something — this is eliza (1966), running locally"/>
+  </div>
+</div>
+
+<div id="ego" aria-hidden="true"></div>
+<div id="hack" aria-hidden="true"></div>
+<div id="rgsd" aria-hidden="true"></div>
+<div id="onrub" aria-hidden="true"></div>
+
+<div id="rubric" role="dialog" aria-label="rubric">
+  <h3>rubric: this visit</h3>
+  <ul>
+    <li data-c="found">[ ] found the rubric</li>
+    <li data-c="read">[ ] read the bio</li>
+    <li data-c="talk">[ ] talked to eliza</li>
+  </ul>
+  <div class="score">score: <span id="score">0</span>/3</div>
+  <button id="cheat">give yourself credit</button>
+  <div class="verdict" id="verdict"></div>
+</div>
+
+<script src="assets/js/eliza.js"></script>
+<script src="assets/js/eggs.js"></script>
+<script src="assets/js/terminal.js"></script>
+</body>
+</html>
