@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
         },{id: "news-i-participated-in-the-sonic-summer-research-workshop-2023-at-cornell-university",
           title: 'I participated in the SoNIC Summer Research Workshop 2023 at Cornell University.',
           description: "",
