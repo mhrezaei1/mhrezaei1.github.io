@@ -1,1 +1,5 @@
-window.MathJax={tex:{tags:"ams"}};
+window.MathJax = {
+  tex: {
+    tags: "ams",
+  },
+};
