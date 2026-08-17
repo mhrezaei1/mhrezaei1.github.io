@@ -14,6 +14,7 @@ on:
     paths:
       - "index.html"
       - "publications.html"
+      - "404.html"
       - "assets/**"
       - "tools/**"
       - "_bibliography/**"
@@ -51,7 +52,9 @@ jobs:
       - name: Assemble site 🔧
         run: |
           mkdir -p _site
-          cp index.html publications.html _site/
+          cp index.html publications.html 404.html _site/
+          # browsers ask for /favicon.ico before reading any markup
+          cp assets/img/favicon.ico _site/favicon.ico
           cp -r assets _site/assets
           # tell GitHub Pages to serve these files as-is
           touch _site/.nojekyll
