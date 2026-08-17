@@ -355,6 +355,12 @@ body {
      destination, which keeps underlines off the prose entirely. */
   .row { display: flex; gap: 1.5rem; align-items: baseline; }
   .row .t { flex: 1 1 auto; font-weight: 600; font-size: 0.94em; }
+  /* The title links to the paper, but is not styled as a link: the underline
+     appears on hover, so the page keeps its clean look and the obvious thing
+     to click is still the title. */
+  .row .t .t-link { text-decoration: none; }
+  .row .t .t-link:hover { text-decoration: underline; text-decoration-thickness: 1px;
+                          text-underline-offset: 0.17em; }
   .row .v { flex: 0 0 auto; font-style: italic; font-size: 0.86em; }
 
   .a { font-size: 0.81em; line-height: 1.45; margin-top: 0.3rem; }
