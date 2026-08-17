@@ -48,15 +48,12 @@
     // ---- specific work ------------------------------------------------
     { rank: 15, re: /\b(rgsd|self.?distill\w*|verifier.?free|without a verifier)\b/, rgsd: true, out: [
       "Rubric-Guided Self-Distillation. The base policy conditioned on the rubric is the teacher; the same weights unconditioned are the student. The teacher distribution is distilled token by token.",
-      "One on-policy rollout per prompt, and no judge in the training loop. It reaches rubric satisfaction comparable to judge-based GRPO without paying a verifier on every rollout.",
-      "Dense per-token signal instead of one sparse trajectory reward. Tested on Qwen and Qwen3-Thinking, 3B to 8B, on medical and science tasks.",
       "An ablation I like: raw rubrics worked better as the teacher signal than self-generated reference answers."
     ]},
     { rank: 15, re: /\b(online rubric\w*|elicit\w*|pairwise)\b/, onrub: true, out: [
       "OnlineRubrics. Criteria are elicited from pairwise comparisons between the current policy and a reference, continuously during training, so the rubric keeps up instead of going stale. ICML 2026.",
       "Static rubrics get hacked and miss criteria that only appear once training is underway. Eliciting online catches those as they emerge.",
       "The criteria that emerged clustered into a few themes: transparency, practicality, organization, and reasoning. Nobody wrote those down in advance.",
-      "Up to eight points over training on static rubrics alone, across AlpacaEval, GPQA, ArenaHard and expert-written sets."
     ]},
     { rank: 15, re: /\b(craft|clustering|weak capabilit\w*)\b/, out: [
       "CRAFT pulls capability descriptions out of rubric criteria and clusters them into a hierarchical capability tree.",
@@ -66,12 +63,10 @@
     { rank: 15, re: /\b(pow3r|policy.?aware|rebalanc\w*|rubric weight\w*|reweight\w*)\b/, out: [
       "POW3R. Human importance and training utility are not the same thing: a criterion can matter enormously for evaluation and teach the policy nothing, because it is already saturated or still out of reach.",
       "It reweights criteria by rollout-level contrast -- what actually separates this policy\'s outputs right now -- without changing what is being evaluated.",
-      "It won 24 of 30 comparisons against vanilla GRPO with rubric rewards, and hit the same plateau in roughly a third of the steps."
     ]},
     { rank: 15, re: /\b(mcp|mcp.?atlas)\b/, out: [
       "MCP Atlas: a thousand human-written tasks over 36 real MCP servers and 220 tools, half of them held out.",
-      "Tasks never say which server or tool to use, so the agent has to find the right one among things that look alike, chain calls across servers, and read the outputs correctly. Scoring is claim-level, against facts grounded in tool results, so verbosity earns nothing.",
-      "The finding I keep quoting: 63% of diagnosed failures are cognitive rather than tool-call errors. Models call the tools fine and then stop early or synthesize badly."
+      "Tasks never say which server or tool to use, so the agent has to find the right one among things that look alike, chain calls across servers, and read the outputs correctly.",
     ]},
     { rank: 15, re: /\b(swe|swe.?atlas|coding agent\w*|issue resolution)\b/, out: [
       "SWE Atlas covers the parts of the job that are not issue resolution: codebase question answering, writing tests, and refactoring. 284 tasks across the three.",
@@ -79,12 +74,11 @@
       "Open-weight models do badly on it. Even the strongest models miss subtle edge cases and ignore ordinary engineering practice."
     ]},
     { rank: 15, re: /\b(rsi|recursive|self.?improv\w*)\b/, out: [
-      "RSI Bench, on recursive self-improvement. Measuring whether a model can actually improve itself is harder than it sounds."
+      "RSI Bench, on recursive self-improvement. Measuring whether a model can actually improve itself is harder than it sounds. Stay tuned for more."
     ]},
     { rank: 14, re: /\b(egonormia|social norm\w*|norms|embodied|vision.?language|vlm)\b/, ego: true, out: [
       "EgoNormia: 1,853 multiple-choice questions grounded in egocentric video, asking what a person should do in a scene rather than what happens next. ACL Findings 2025.",
       "Each item scores three things: the action, the justification for it, and which alternatives are sensible at all. Seven norm categories -- safety, privacy, proxemics, politeness, cooperation, coordination, and communication.",
-      "Humans get 92%. The best vision-language model we tested got 54%, and the failures are norm reasoning rather than perception -- they see the scene and still choose badly."
     ]},
     { rank: 14, re: /\b(commonsense|knowledge base|resource)\b/, out: [
       "A commonsense-with-negation resource: over two million if-then triples, built by automatically augmenting existing commonsense corpora with negation. ACL Findings 2026.",
@@ -108,8 +102,6 @@
     ]},
     { rank: 12, re: /\b(negation|negat\w+|\bnot\b|nothing|never)\b/, negate: true, out: [
       "Negation is where I started. Models handle 'not' badly, and two papers went into making encoder models less bad at it.",
-      "Next Sentence Polarity Prediction: a self-supervised task used to further pre-train BERT and RoBERTa, evaluated on nine negation benchmarks. Between 1.8 and 9.1 points on CondaQA.",
-      "The other angle was turning negated sentences into affirmative paraphrases automatically, then training on those.",
       "You negated something. I am contractually obliged to react."
     ]},
     { rank: 11, re: /\b(rl|reinforcement|grpo|ppo|rlhf|rlvr|post.?train\w*|distill\w*|sft)\b/, out: [
@@ -117,14 +109,10 @@
       "Rubric-based RL, reward modelling, and self-distillation are the through-line."
     ]},
     { rank: 11, re: /\b(benchmark\w*|eval\w*|agent\w*|tool.?use)\b/, out: [
-      "I build benchmarks for tool-use and coding agents -- MCP Atlas, SWE Atlas, RSI Bench.",
-      "Evaluation is the bottleneck. Most agent benchmarks are easier than the capability they claim to measure."
+      "Evaluation is the bottleneck. Most agent benchmarks are easier than the capability they claim to measure. RSI is next."
     ]},
     { rank: 11, re: /\b(data|annotation|pipeline|taxonomy|quality)\b/, out: [
       "I have built data-collection pipelines end to end: taxonomy, verification, annotation guidelines, quality metrics, failure analysis."
-    ]},
-    { rank: 11, re: /\b(mentor\w*|mentee\w*|intern\w*)\b/, out: [
-      "I co-mentor interns working on agentic RL verifiers, hinting strategies for on-policy self-distillation, and curriculum-based self-improvement."
     ]},
 
     // ---- affiliations -------------------------------------------------
@@ -142,16 +130,8 @@
     { rank: 10, re: /\b(teach\w*|ta\b|course|student\w*|discrete math)\b/, out: [
       "I was head TA and course coordinator for discrete mathematics across five semesters, around a hundred students a term."
     ]},
-    { rank: 10, re: /\b(award\w*|honor\w*|prize|gpa|summa|phi beta|galileo|outstanding|fellow\w*)\b/, out: [
-      "Summa cum laude, 4.0. Outstanding Senior for the CS department and the College of Science, Galileo Circle Scholar, Phi Beta Kappa.",
-      "There is a Silver Reviewer Award from ICML 2026 in there too, which I am unreasonably pleased about."
-    ]},
     { rank: 10, re: /\b(review\w*|neurips|iclr|colm|icwsm|arr|service|program committee)\b/, out: [
       "I review for NeurIPS, ICML, ICLR, COLM, ACL Rolling Review, ACL SRW and ICWSM."
-    ]},
-    { rank: 10, re: /\b(skill\w*|stack|tool\w*|verl|skyrl|harbor|vllm|sglang|ray|kubernetes|docker|pytorch|python|java|sandbox\w*|infra\w*)\b/, out: [
-      "Day to day: verl, SkyRL, Harbor, Ray, vLLM, SGLang, PyTorch, Transformers.",
-      "Python mostly, some Java and C/C++; Docker, Kubernetes and sandboxes for the agent work."
     ]},
     { rank: 10, re: /\b(paper|papers|publication|publications|arxiv|research|write|written)\b/, out: [
       "The publications link above has all of them. Anything specific -- rubrics, reward hacking, negation, benchmarks?",
