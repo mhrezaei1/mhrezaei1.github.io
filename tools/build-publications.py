@@ -53,12 +53,12 @@ def link_author(a):
 
 VENUE = {
  "rezaei2026onlinerubricselicitationpairwise": ("ICML 2026", 2026),
- "mahmoud2026rewardhacking": ("Under review, NeurIPS 2026", 2026),
- "rezaei2026rgsd": ("Under review, NeurIPS 2026", 2026),
- "tyagi2026noteveryrubric": ("Under review, NeurIPS 2026", 2026),
- "gupta2026craft": ("arXiv 2026", 2026),
- "bandi2026mcpatlas": ("Under review, NeurIPS 2026", 2026),
- "raghavendra2026sweatlas": ("Under review, NeurIPS 2026", 2026),
+ "mahmoud2026rewardhacking": ("Preprint", 2026),
+ "rezaei2026rgsd": ("Preprint", 2026),
+ "tyagi2026noteveryrubric": ("Preprint", 2026),
+ "gupta2026craft": ("Preprint", 2026),
+ "bandi2026mcpatlas": ("Preprint", 2026),
+ "raghavendra2026sweatlas": ("Preprint", 2026),
  "wang-etal-2026-commonsense": ("ACL Findings 2026", 2026),
  "rezaei-etal-2025-egonormia": ("ACL Findings 2025", 2025),
  "rezaei-blanco-2025-making": ("NAACL 2025", 2025),

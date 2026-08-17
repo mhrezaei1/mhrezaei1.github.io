@@ -115,7 +115,6 @@
     float: right;
     width: 108px; height: 108px;
     margin: 0.3rem 0 1rem 1.75rem;
-    filter: grayscale(1);
   }
 
   h1 { font-size: 1.55rem; font-weight: 600; letter-spacing: -0.01em;
@@ -304,6 +303,10 @@
      rather than letting anyone reach them. Fall back to an ordinary
      scrolling document, with the prompt stuck to the bottom edge. */
   @media (max-width: 40rem) {
+    /* Safari zooms in on focus if the field is under 16px. The log stays at
+       its own size; only the field the keyboard targets is bumped. */
+    #in { font-size: 16px; }
+
     html { height: auto; }
     body.home { height: auto; display: block; overflow: auto; }
     main { display: block; overflow: visible; }
@@ -351,7 +354,7 @@ body {
   /* The title is not a link: the bracketed tags below carry every
      destination, which keeps underlines off the prose entirely. */
   .row { display: flex; gap: 1.5rem; align-items: baseline; }
-  .row .t { flex: 1 1 auto; font-weight: 600; }
+  .row .t { flex: 1 1 auto; font-weight: 600; font-size: 0.94em; }
   .row .v { flex: 0 0 auto; font-style: italic; font-size: 0.86em; }
 
   .a { font-size: 0.81em; line-height: 1.45; margin-top: 0.3rem; }

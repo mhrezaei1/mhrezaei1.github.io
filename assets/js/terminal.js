@@ -31,7 +31,10 @@
     input.placeholder = "";        // the invitation has been accepted
   }
 
-  var HINT = "ask me something \u2014 this is eliza (1966), running locally";
+  // the long hint overflows a phone and gets cut mid-word ("running loc…")
+  var HINT = matchMedia("(max-width: 40rem)").matches
+    ? "ask me something"
+    : "ask me something \u2014 this is eliza (1966), running locally";
 
   var commands = {
     help: function () {
@@ -51,6 +54,7 @@
     exit: function () { commands.clear(); }
   };
 
+  input.placeholder = HINT;      // markup ships empty; the hint depends on width
   EGGS.init({ line: line, page: page });
 
   input.addEventListener("keydown", function (e) {
