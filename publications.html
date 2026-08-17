@@ -99,21 +99,19 @@
 
 </div>
 
-<!-- GoatCounter: no cookies, nothing rendered on the page, dashboard private.
-     https:// rather than the protocol-relative form in the docs, so the file
-     also works when opened directly from disk.
-
-     The path callback normalizes the three URLs that resolve to the same page
-     (/publications, /publications/, /publications.html) onto one, so the stats
-     are not split three ways. Must be defined before count.js loads. -->
+<!-- Umami: no cookies, nothing rendered on the page, dashboard private.
+     Auto-tracking is off so the pageview can be sent with a normalized path.
+     /publications, /publications/ and /publications.html are the same page and
+     would otherwise be counted as three. -->
+<script defer src="https://cloud.umami.is/script.js"
+        data-website-id="7712edc8-2c79-45ce-a0ea-d855067aa17e"
+        data-auto-track="false"></script>
 <script>
-  window.goatcounter = {
-    path: function (p) {
-      return p.replace(/\.html$/, "").replace(/\/+$/, "") || "/";
-    }
-  };
+  addEventListener("load", function () {
+    if (!window.umami) return;          // blocked, or offline
+    var p = location.pathname.replace(/\.html$/, "").replace(/\/+$/, "") || "/";
+    umami.track(function (props) { return Object.assign({}, props, { url: p }); });
+  });
 </script>
-<script data-goatcounter="https://mhrezaei.goatcounter.com/count"
-        async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

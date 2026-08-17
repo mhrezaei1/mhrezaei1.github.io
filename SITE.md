@@ -69,14 +69,17 @@ still read grammatically.
 
 ## Analytics
 
-GoatCounter, loaded async at the end of each page. No cookies, no consent
-banner, nothing rendered; the dashboard is at
-<https://mhrezaei.goatcounter.com>. It is the only external request the site
-makes -- everything else is served from this repository.
+Umami Cloud, deferred, at the end of each page. No cookies, no consent
+banner, nothing rendered.
 
-Two things to expect: ad blockers block it, so counts undercount real
-traffic; and it is loaded with `https://` rather than the protocol-relative
-`//` in GoatCounter's own docs, so the pages still work opened from disk.
+Auto-tracking is switched off (`data-auto-track="false"`) so the pageview
+can be sent with a normalized path: /publications, /publications/ and
+/publications.html are one page and would otherwise be counted as three.
+The normalizing call is in each page's inline script, using
+`umami.track(props => ({...props, url}))`.
+
+It is the only external request the site makes. Ad blockers block it, so
+counts undercount real traffic.
 
 ## Deploying
 
