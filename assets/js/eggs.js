@@ -30,8 +30,6 @@
     "Opening the console earns a bonus point.",
     "The visitor should return within 30 days.",
     "Closing this tab forfeits partial credit.",
-    "Eye contact with the photograph is encouraged.",
-    "Typing anything at all is scored generously.",
 
     // -- grading a model response -------------------------------------
     "The response must be accurate.",
@@ -62,30 +60,14 @@
     // -- grading the rubric ------------------------------------------
     // these are the arguments the papers actually make, played straight
     "Criteria must separate the current policy's outputs.",
-    "A saturated criterion teaches nothing.",
-    "A criterion out of reach teaches nothing either.",
-    "Weight by what the policy can learn, not by what matters most.",
     "The verifier must agree with an independent panel.",
-    "Criteria that appear mid-training count too.",
     "Credit given must survive a second grader.",
     "Verbosity earns no credit.",
     "The justification is scored separately from the answer.",
-    "Plausible alternatives must be marked as such.",
     "Criteria must be independently verifiable.",
-    "Criteria must be mutually exclusive.",
-    "Criteria need not be mutually exclusive.",
     "The rubric must not be gameable.",
     "The verifier must not be fooled.",
-    "The rubric must not be visible to the policy.",
-    "Inter-annotator agreement must exceed 0.8.",
-    "Disagreements are resolved by the third author.",
-    "Partial credit is permitted.",
-    "Ties are broken toward the shorter answer.",
-    "Weights were chosen after seeing the plot.",
-    "This rubric has not been validated.",
-    "This criterion must not reference itself.",
-    "This criterion is worth more than it appears.",
-    "The rubric must contain at most 20 criteria."
+    "The rubric must not be visible to the policy."
   ];
 
   var stormBusy = false,
