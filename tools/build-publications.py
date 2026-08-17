@@ -111,13 +111,17 @@ for key, (venue, year) in VENUE.items():
     if year != last:
         body_html.write('\n      <h2>%d</h2>\n' % year); last = year
     tg = "".join('<a href="%s">[%s]</a>' % (u, t) for t, u in tags(key, e))
+    primary = tags(key, e)
+    title_html = html.escape(e["title"])
+    if primary:
+        title_html = '<a class="t-link" href="%s">%s</a>' % (primary[0][1], title_html)
     note = '<span class="eq">* equal contribution</span>' if "egonormia" in key else ""
     body_html.write(
         '      <div class="entry">\n'
         '        <div class="row"><span class="t">%s</span><span class="v">%s</span></div>\n'
         '        <div class="a">%s</div>\n'
         '        <div class="tags">%s%s</div>\n'
-        '      </div>\n' % (html.escape(e["title"]), venue, ppl, tg, note))
+        '      </div>\n' % (title_html, venue, ppl, tg, note))
 
 PAGE = '''<!doctype html>
 <html lang="en">

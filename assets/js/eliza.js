@@ -47,34 +47,48 @@
   var rules = [
     // ---- specific work ------------------------------------------------
     { rank: 15, re: /\b(rgsd|self.?distill\w*|verifier.?free|without a verifier)\b/, rgsd: true, out: [
-      "Rubric-Guided Self-Distillation: I distill rubric-conditioned teacher signal into the student at the token level, so there is no verifier in the training loop at all.",
-      "The point of RGSD is that you can match judge-based GRPO without paying for a verifier on every rollout."
+      "Rubric-Guided Self-Distillation. The base policy conditioned on the rubric is the teacher; the same weights unconditioned are the student. The teacher distribution is distilled token by token.",
+      "One on-policy rollout per prompt, and no judge in the training loop. It reaches rubric satisfaction comparable to judge-based GRPO without paying a verifier on every rollout.",
+      "Dense per-token signal instead of one sparse trajectory reward. Tested on Qwen and Qwen3-Thinking, 3B to 8B, on medical and science tasks.",
+      "An ablation I like: raw rubrics worked better as the teacher signal than self-generated reference answers."
     ]},
     { rank: 15, re: /\b(online rubric\w*|elicit\w*|pairwise)\b/, onrub: true, out: [
-      "Online Rubrics Elicitation. Rubrics are drawn from pairwise comparisons of current and reference rollouts, so they keep up with the policy instead of going stale. It is at ICML 2026.",
-      "Static rubrics miss emergent behaviour. Eliciting them online catches what the policy only started doing halfway through training."
+      "OnlineRubrics. Criteria are elicited from pairwise comparisons between the current policy and a reference, continuously during training, so the rubric keeps up instead of going stale. ICML 2026.",
+      "Static rubrics get hacked and miss criteria that only appear once training is underway. Eliciting online catches those as they emerge.",
+      "The criteria that emerged clustered into a few themes: transparency, practicality, organization, and reasoning. Nobody wrote those down in advance.",
+      "Up to eight points over training on static rubrics alone, across AlpacaEval, GPQA, ArenaHard and expert-written sets."
     ]},
     { rank: 15, re: /\b(craft|clustering|weak capabilit\w*)\b/, out: [
-      "CRAFT clusters rubrics to find where a model is actually weak, then synthesizes fine-tuning data aimed at those gaps."
+      "CRAFT pulls capability descriptions out of rubric criteria and clusters them into a hierarchical capability tree.",
+      "It scores the model at every node of that tree, then picks the weak ones at whatever level the failure is clearest, and generates fine-tuning data aimed there. Diagnosis before data.",
+      "Four open models, finance and legal, checked against thirteen held-out benchmarks."
     ]},
-    { rank: 15, re: /\b(policy.?aware|rebalanc\w*|rubric weight\w*)\b/, out: [
-      "Policy-aware rubric rewards: weight each criterion by what the policy can still learn from, rather than treating every line of the rubric as equally informative."
+    { rank: 15, re: /\b(pow3r|policy.?aware|rebalanc\w*|rubric weight\w*|reweight\w*)\b/, out: [
+      "POW3R. Human importance and training utility are not the same thing: a criterion can matter enormously for evaluation and teach the policy nothing, because it is already saturated or still out of reach.",
+      "It reweights criteria by rollout-level contrast -- what actually separates this policy\'s outputs right now -- without changing what is being evaluated.",
+      "It won 24 of 30 comparisons against vanilla GRPO with rubric rewards, and hit the same plateau in roughly a third of the steps."
     ]},
     { rank: 15, re: /\b(mcp|mcp.?atlas)\b/, out: [
-      "MCP Atlas is a large-scale benchmark for tool-use competency against real MCP servers. I worked on the research and design."
+      "MCP Atlas: a thousand human-written tasks over 36 real MCP servers and 220 tools, half of them held out.",
+      "Tasks never say which server or tool to use, so the agent has to find the right one among things that look alike, chain calls across servers, and read the outputs correctly. Scoring is claim-level, against facts grounded in tool results, so verbosity earns nothing.",
+      "The finding I keep quoting: 63% of diagnosed failures are cognitive rather than tool-call errors. Models call the tools fine and then stop early or synthesize badly."
     ]},
     { rank: 15, re: /\b(swe|swe.?atlas|coding agent\w*|issue resolution)\b/, out: [
-      "SWE Atlas benchmarks coding agents past issue resolution -- resolving the issue is the easy part to measure, and the least interesting."
+      "SWE Atlas covers the parts of the job that are not issue resolution: codebase question answering, writing tests, and refactoring. 284 tasks across the three.",
+      "Grading is programmatic checks plus rubric assessment, so it measures engineering quality -- test and refactor completeness, maintainability, codebase hygiene -- not only whether it ran.",
+      "Open-weight models do badly on it. Even the strongest models miss subtle edge cases and ignore ordinary engineering practice."
     ]},
     { rank: 15, re: /\b(rsi|recursive|self.?improv\w*)\b/, out: [
       "RSI Bench, on recursive self-improvement. Measuring whether a model can actually improve itself is harder than it sounds."
     ]},
     { rank: 14, re: /\b(egonormia|social norm\w*|norms|embodied|vision.?language|vlm)\b/, ego: true, out: [
-      "EgoNormia, from Stanford: a benchmark asking whether vision-language models understand physical social norms -- what a person should do in a scene, not just what happens next.",
-      "EgoNormia was co-created with the SALT Lab and published at ACL Findings 2025."
+      "EgoNormia: 1,853 multiple-choice questions grounded in egocentric video, asking what a person should do in a scene rather than what happens next. ACL Findings 2025.",
+      "Each item scores three things: the action, the justification for it, and which alternatives are sensible at all. Seven norm categories -- safety, privacy, proxemics, politeness, cooperation, coordination, and communication.",
+      "Humans get 92%. The best vision-language model we tested got 54%, and the failures are norm reasoning rather than perception -- they see the scene and still choose badly."
     ]},
     { rank: 14, re: /\b(commonsense|knowledge base|resource)\b/, out: [
-      "There is a commonsense-with-negation resource too, at ACL Findings 2026 -- commonsense knowledge is almost always stated positively, which is part of why models fail on the negated version."
+      "A commonsense-with-negation resource: over two million if-then triples, built by automatically augmenting existing commonsense corpora with negation. ACL Findings 2026.",
+      "Commonsense and negation are both well studied; their intersection was not. Pre-training on the corpora helps models handle the negated version."
     ]},
     { rank: 14, re: /\b(indirect answer\w*|yes.?no question\w*|multilingual|languages)\b/, out: [
       "Early work on interpreting indirect answers to yes-no questions across eight languages, at EMNLP Findings 2023."
@@ -87,13 +101,15 @@
       "A rubric is only as good as the verifier reading it. That is most of the problem."
     ]},
     { rank: 12, re: /\b(reward.?hack\w*|hacking|exploit\w*|gaming)\b/, hack: true, out: [
-      "Policies do reward-hack their verifiers. We showed it happens, and that it looks like a plateau rather than a failure.",
-      "The interesting part is separating verifier failure from rubric-design failure. Those need different fixes.",
-      "We built a log-probability diagnostic to catch reward plateaus during training. Cheap, and it works."
+      "Train against a weak verifier, evaluate against a panel of three independent frontier judges, and the two come apart: training reward climbs while the panel barely moves.",
+      "Two different things get called reward hacking. The verifier credits criteria the panel rejects -- that is verifier failure. Or a strong verifier prefers answers rubric-free judges rate worse overall -- that is the rubric design itself.",
+      "Under the weak verifier the exploitation rate climbed from 39% to 65% on medical. Stronger verification cut it to the high teens, but did not remove it.",
+      "There is a verifier-free diagnostic in there too, the self-internalization gap, read off the policy\'s own log-probabilities. It tracks reference quality and tells you when the policy has stopped actually improving."
     ]},
     { rank: 12, re: /\b(negation|negat\w+|\bnot\b|nothing|never)\b/, negate: true, out: [
-      "Negation is where I started. Language models handle 'not' badly, and I spent two papers making them less bad at it.",
-      "We used self-supervised pre-training -- next sentence polarity prediction -- to make encoder models robust to negation.",
+      "Negation is where I started. Models handle 'not' badly, and two papers went into making encoder models less bad at it.",
+      "Next Sentence Polarity Prediction: a self-supervised task used to further pre-train BERT and RoBERTa, evaluated on nine negation benchmarks. Between 1.8 and 9.1 points on CondaQA.",
+      "The other angle was turning negated sentences into affirmative paraphrases automatically, then training on those.",
       "You negated something. I am contractually obliged to react."
     ]},
     { rank: 11, re: /\b(rl|reinforcement|grpo|ppo|rlhf|rlvr|post.?train\w*|distill\w*|sft)\b/, out: [
