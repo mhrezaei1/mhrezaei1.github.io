@@ -137,7 +137,7 @@ PAGE = '''<!doctype html>
 
   <header>
     <h1>Publications</h1>
-    <div class="back"><a href="index.html">&larr; MohammadHossein Rezaei</a></div>
+    <div class="back"><a href="/">&larr; MohammadHossein Rezaei</a></div>
   </header>
 ''' + body_html.getvalue() + '''
 </div>

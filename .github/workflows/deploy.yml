@@ -55,6 +55,10 @@ jobs:
           cp index.html publications.html 404.html _site/
           # browsers ask for /favicon.ico before reading any markup
           cp assets/img/favicon.ico _site/favicon.ico
+          # /publications works via Pages' extension fallback and
+          # /publications.html directly; this covers /publications/ too
+          mkdir -p _site/publications
+          cp publications.html _site/publications/index.html
           cp -r assets _site/assets
           # tell GitHub Pages to serve these files as-is
           touch _site/.nojekyll
