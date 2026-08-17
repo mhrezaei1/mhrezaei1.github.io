@@ -67,6 +67,17 @@ The bio negation is tuned to the sentences currently in `index.html`. After
 rewriting that copy, ask the page about negation and check the inserted words
 still read grammatically.
 
+## Analytics
+
+GoatCounter, loaded async at the end of each page. No cookies, no consent
+banner, nothing rendered; the dashboard is at
+<https://mhrezaei.goatcounter.com>. It is the only external request the site
+makes -- everything else is served from this repository.
+
+Two things to expect: ad blockers block it, so counts undercount real
+traffic; and it is loaded with `https://` rather than the protocol-relative
+`//` in GoatCounter's own docs, so the pages still work opened from disk.
+
 ## Deploying
 
 Push to `main`. The workflow rebuilds publications, assembles `_site/` and
