@@ -24,7 +24,18 @@
 
 <!-- GoatCounter: no cookies, nothing rendered on the page, dashboard private.
      https:// rather than the protocol-relative form in the docs, so the file
-     also works when opened directly from disk. -->
+     also works when opened directly from disk.
+
+     The path callback normalizes the three URLs that resolve to the same page
+     (/publications, /publications/, /publications.html) onto one, so the stats
+     are not split three ways. Must be defined before count.js loads. -->
+<script>
+  window.goatcounter = {
+    path: function (p) {
+      return p.replace(/\.html$/, "").replace(/\/+$/, "") || "/";
+    }
+  };
+</script>
 <script data-goatcounter="https://mhrezaei.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
 </body>
