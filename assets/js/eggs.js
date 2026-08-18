@@ -615,6 +615,15 @@
 
   // Returns [before, "not-phrase", after] or null if we cannot negate it.
   function negateSentence(sen) {
+    // A contracted auxiliary -- "I've been working" -- is invisible to AUX,
+    // since the verb is glued to the pronoun. Insert after the contraction:
+    // "I've not been working".
+    var c = sen.match(/\b(?:I|we|you|they|he|she|it)'(?:ve|m|re|s|d|ll)\b/i);
+    if (c) {
+      var ci = sen.indexOf(c[0]) + c[0].length;
+      return [sen.slice(0, ci), " not", sen.slice(ci)];
+    }
+
     var m = sen.match(AUX);
     if (m) {
       var at = sen.indexOf(m[0]) + m[0].length;
