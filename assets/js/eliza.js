@@ -74,7 +74,9 @@
       "Open-weight models do badly on it. Even the strongest models miss subtle edge cases and ignore ordinary engineering practice."
     ]},
     { rank: 15, re: /\b(rsi|recursive|self.?improv\w*)\b/, out: [
-      "RSI Bench, on recursive self-improvement. Measuring whether a model can actually improve itself is harder than it sounds. Stay tuned for more."
+      "RSI Bench: whether models can build the next generation of models without us. Mastering the work of frontier AI development is the prerequisite.",
+      "Published tasks with their verifiers, graded solver runs, and the traces behind them. In preview at rsi-benchmark.com, and open to contributions.",
+      "That is the one I am working on now."
     ]},
     { rank: 14, re: /\b(egonormia|social norm\w*|norms|embodied|vision.?language|vlm)\b/, ego: true, out: [
       "EgoNormia: 1,853 multiple-choice questions grounded in egocentric video, asking what a person should do in a scene rather than what happens next. ACL Findings 2025.",
