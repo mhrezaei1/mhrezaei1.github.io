@@ -53,9 +53,9 @@ def link_author(a):
 
 VENUE = {
  "rezaei2026onlinerubricselicitationpairwise": ("ICML 2026", 2026),
- "mahmoud2026rewardhacking": ("Preprint", 2026),
+ "mahmoud2026rewardhacking": ("NeurIPS 2026 (to appear)", 2026),
  "rezaei2026rgsd": ("Preprint", 2026),
- "tyagi2026noteveryrubric": ("Preprint", 2026),
+ "tyagi2026noteveryrubric": ("NeurIPS 2026 (to appear)", 2026),
  "gupta2026craft": ("Preprint", 2026),
  "bandi2026mcpatlas": ("Preprint", 2026),
  "raghavendra2026sweatlas": ("Preprint", 2026),
