@@ -17,6 +17,17 @@
   // negation effect rewrites
   var line = function () {}, page = null;
 
+  /* One analytics beacon per effect, at most once per page load. Guarded on
+     window.umami so a blocked or missing tracker changes nothing, and wrapped
+     so an analytics failure can never break an effect. */
+  var seen = {};
+  function track(name) {
+    if (seen[name]) return;
+    seen[name] = true;
+    if (!window.umami) return;
+    try { umami.track(name); } catch (e) {}
+  }
+
   var CRITERIA = [
     // -- grading the visitor ------------------------------------------
     "The visitor must read the bio.",
@@ -95,6 +106,7 @@
 
   function rubricStorm() {
     if (stormBusy) return;
+    track("egg-rubrics");
     stormBusy = true;
     line("!! rubric trigger: " + CRITERIA.length + " criteria, 1 visitor", "sys");
 
@@ -197,6 +209,7 @@
   var hackBusy = false;
   function rewardHack() {
     if (hackBusy) return;
+    track("egg-reward-hacking");
     hackBusy = true;
     var box = document.getElementById("hack");
     box.classList.add("on");
@@ -296,6 +309,7 @@
   var onrubBusy = false;
   function elicit() {
     if (onrubBusy) return;
+    track("egg-online-rubrics");
     onrubBusy = true;
     var box = document.getElementById("onrub");
     soloPanel("onrub");
@@ -361,6 +375,7 @@
   var rgsdBusy = false;
   function distil() {
     if (rgsdBusy) return;
+    track("egg-rgsd");
     rgsdBusy = true;
     var box = document.getElementById("rgsd");
     box.classList.add("on");
@@ -460,6 +475,7 @@
   var egoBusy = false;
   function egoNormia() {
     if (egoBusy) return;
+    track("egg-egonormia");
     egoBusy = true;
     var box = document.getElementById("ego");
     box.classList.add("on");
@@ -547,6 +563,7 @@
   var desertBusy = false;
   function growDesert() {
     if (desertBusy) return;
+    track("egg-arizona");
     desertBusy = true;
 
     var n = innerWidth < 620 ? 5 : 9, taken = [], made = [];
@@ -714,6 +731,7 @@
   var negBusy = false;
   function negate() {
     if (negBusy) return;
+    track("egg-negation");
     negBusy = true;
     line("!! negation trigger: could not not parse that", "sys");
     line("   negating every sentence above", "sys");
@@ -758,6 +776,7 @@
     document.addEventListener("click", function (e) {
       if (!e.target.classList || !e.target.classList.contains("photo")) return;
       panel.classList.add("on");
+      track("egg-scorecard");
       rubricMet("found");
     });
 
