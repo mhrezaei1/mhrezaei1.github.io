@@ -7,7 +7,8 @@
       input   = document.getElementById("in"),
       page    = document.getElementById("page"),
       started = false,
-      turns   = 0;
+      turns   = 0,
+      tracked = false;   // "someone actually talked to it", once per load
 
   function line(text, cls) {
     var d = document.createElement("div");
@@ -29,6 +30,12 @@
     if (started) return;
     started = true;
     input.placeholder = "";        // the invitation has been accepted
+
+    // Not reset by `clear`: this counts visitors who engaged, not conversations.
+    if (!tracked) {
+      tracked = true;
+      if (window.umami) { try { umami.track("chat-started"); } catch (e) {} }
+    }
   }
 
   // the long hint overflows a phone and gets cut mid-word ("running loc…")

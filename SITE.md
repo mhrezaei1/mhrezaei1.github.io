@@ -81,6 +81,22 @@ The normalizing call is in each page's inline script, using
 It is the only external request the site makes. Ad blockers block it, so
 counts undercount real traffic.
 
+A few events are sent alongside pageviews, each at most once per page load:
+
+    chat-started          someone typed a first message to ELIZA
+    egg-rubrics           ... and the effect each question triggered
+    egg-negation
+    egg-arizona
+    egg-egonormia
+    egg-reward-hacking
+    egg-rgsd
+    egg-online-rubrics
+    egg-scorecard         the rubric panel on the photo
+
+Deduped on purpose: `chat-started` counts visitors who engaged, not
+conversations, and survives `clear`. No message text is ever sent — only the
+name of the rule that matched.
+
 ## Deploying
 
 Push to `main`. The workflow rebuilds publications, assembles `_site/` and
