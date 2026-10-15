@@ -45,7 +45,7 @@
 
   var commands = {
     help: function () {
-      line("keywords: rubrics, reward hacking, negation, benchmarks, scale, stanford, arizona", "e");
+      line("keywords: rubrics, reward hacking, negation, benchmarks, thinking machines, scale, stanford, arizona", "e");
       line("commands: help, whoami, ls, clear, exit", "e");
     },
     whoami: function () { line("guest", "e"); },

@@ -76,7 +76,7 @@
     { rank: 15, re: /\b(rsi|recursive|self.?improv\w*)\b/, out: [
       "RSI Bench: whether models can build the next generation of models without us. Mastering the work of frontier AI development is the prerequisite.",
       "Published tasks with their verifiers, graded solver runs, and the traces behind them. In preview at rsi-benchmark.com, and open to contributions.",
-      "That is the one I am working on now."
+      "That was the last thing I worked on at Scale."
     ]},
     { rank: 14, re: /\b(egonormia|social norm\w*|norms|embodied|vision.?language|vlm)\b/, ego: true, out: [
       "EgoNormia: 1,853 multiple-choice questions grounded in egocentric video, asking what a person should do in a scene rather than what happens next. ACL Findings 2025.",
@@ -93,7 +93,7 @@
     // ---- themes -------------------------------------------------------
     { rank: 12, re: /\b(rubric|rubrics)\b/, storm: true, out: [
       "Rubrics are how I get a reward signal where you cannot check correctness automatically. What would you want to grade?",
-      "I work on eliciting rubrics online, while the policy is still improving. Static rubrics go stale fast.",
+      "I worked on eliciting rubrics online, while the policy is still improving. Static rubrics go stale fast.",
       "A rubric is only as good as the verifier reading it. That is most of the problem."
     ]},
     { rank: 12, re: /\b(reward.?hack\w*|hacking|exploit\w*|gaming)\b/, hack: true, out: [
@@ -118,9 +118,13 @@
     ]},
 
     // ---- affiliations -------------------------------------------------
-    { rank: 10, re: /\b(scale ?ai|scale|work|company|job title|role)\b/, out: [
-      "Research Scientist at Scale AI, on post-training and evaluation. Before that I interned there on the same team.",
-      "At Scale I work on rubric-based rewards, self-distillation, and agent benchmarks."
+    { rank: 10, re: /\b(thinking ?machines|tml|work|company|job title|role)\b/, out: [
+      "Member of Technical Staff at Thinking Machines Lab. Before that, Scale AI, on post-training and evaluation.",
+      "Thinking Machines Lab, now. Ask about the earlier work -- rubrics, reward hacking, benchmarks."
+    ]},
+    { rank: 10, re: /\b(scale ?ai|scale)\b/, out: [
+      "I was a Research Scientist at Scale AI, on post-training and evaluation. Before that I interned there on the same team.",
+      "At Scale I worked on rubric-based rewards, self-distillation, and agent benchmarks."
     ]},
     { rank: 10, re: /\b(stanford|salt|sail|diyi)\b/, ego: true, out: [
       "Stanford's SALT Lab, advised by Diyi Yang. That work became EgoNormia."
@@ -158,7 +162,7 @@
     ]},
     { rank: 10, re: /\b(mohammad|mohammadhossein|rezaei)\b/, out: [
       "Mohammad. MohammadHossein Rezaei in full — one given name, not two, though most people shorten it.",
-      "Mohammad is a Research Scientist at Scale AI, working on post-training and evaluation of language models.",
+      "Mohammad is a Member of Technical Staff at Thinking Machines Lab. Before that, he was at Scale AI, working on post-training and evaluation.",
       "That is whose site this is. He works on rubrics as reward signal, reward hacking, and negation — ask about any of them.",
       "Mohammad wrote the bio above. I only paraphrase it, and not always well."
     ]},
